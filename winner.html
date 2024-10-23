@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Winner</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+<body>
+    <div class="winner">
+        <div class="image" id="stars">
+            <img src="winner.svg" alt="Winner image">
+        </div>
+        <div class="image" id="cup">
+            <img src="cup.svg" alt="Cup image">
+        </div>
+        <h1 class="hurray">HURRAY!!</h1>
+        <h2>YOU WON THE GAME</h2>
+        <button onclick="window.location.href='index.html'" class="playagain">PLAY AGAIN</button>
+    </div>
+
+    <button class="rules_button">Rules</button>
+
+    <div class="rules" style="display: none;">
+        <button class="rules_close_button">X</button>
+        <h1 class="game_rules">Game Rules</h1>
+        <ul>
+            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+            <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+            <li>If both players lay down the same hand, each player lays down another hand.</li>
+        </ul>
+    </div>
+
+    <script >
+        const rulesButton = document.querySelector('.rules_button');
+        const closeButton = document.querySelector('.rules_close_button');
+        const rulesDiv = document.querySelector('.rules');
+
+       
+        rulesButton.addEventListener('click', function() {
+            rulesDiv.style.display = 'flex'; 
+        });
+
+        
+        closeButton.addEventListener('click', function() {
+            rulesDiv.style.display = 'none';  
+        });
+    </script>
+
+</body>
+</html>
